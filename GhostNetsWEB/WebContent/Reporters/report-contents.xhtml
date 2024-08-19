@@ -1,0 +1,55 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>GhostNets Application - Report</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/ressources/css/report.css" />
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="success-message">
+                ${repMB.reported}
+            </div>
+            <h2 class="section-title">Report Ghost Net</h2>
+            <p>Your report may assist our salvage team in determining the best course of action for the ghost net retrieval. Thank you in advance!</p>
+            <h:form styleClass="report-form">
+                <h:messages styleClass="error" showDetail="false" showSummary="true" />
+                <div class="form-section">
+                    <label for="location">Location:</label>
+                    <p:autoComplete id="location" value="#{ghostNetMB.location}" completeMethod="#{ghostNetMB.completeLocation}" var="loc"
+                                    itemLabel="#{loc.name}" itemValue="#{loc}" forceSelection="true" converter="locationConverter">
+                        <f:selectItem itemLabel="Select Location" itemValue="#{null}" />
+                    </p:autoComplete>
+                </div>
+
+                <div class="form-section">
+                    <label for="status">Status:</label>
+                    <h:inputText id="status" value="Reported" disabled="true" />
+                </div>
+                <div class="form-section">
+                    <label for="size">Size (m):</label>
+                    <h:inputText id="size" value="#{ghostNetMB.ghostNet.size}" required="true" />
+                </div>
+                <div class="form-section">
+                    <h3>Reporter information</h3>
+                </div>
+                <div class="form-section">
+                    <label for="fullName">Full Name:</label>
+                    <h:inputText id="fullName" value="#{ghostNetMB.ghostNet.reporterFullName}" />
+
+                    <label for="phone">Phone:</label>
+                    <h:inputText id="phone" value="#{ghostNetMB.ghostNet.reporterPhone}" />
+                </div>
+
+                <h:commandButton value="Back" styleClass="back-button" action="#{repMB.back}" immediate="true" />
+                <h:commandButton value="Report" styleClass="report-button" action="#{ghostNetMB.addReport}" />
+            </h:form>
+        </div>
+    </h:body>
+</ui:composition>

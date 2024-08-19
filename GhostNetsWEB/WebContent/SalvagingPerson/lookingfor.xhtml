@@ -1,0 +1,75 @@
+<!-- salvaging_dashboard.xhtml -->
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <title>GhostNets Salvaging Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/ressources/css/dashboard.css" />
+    </h:head>
+
+    <h:body>
+        <div class="dashboard-container">
+           <ui:include src="sidebar.xhtml"/>
+            <div class="main-content">
+                <div class="top-widgets">
+                    <div class="widget">
+                        <h2>Reported</h2>
+                        <h:outputLabel value="#{ghostNetMB.nbReported}" />
+                    </div>
+
+                    <div class="widget">
+                        <h2>Retrieved</h2>
+						<h:outputLabel value="#{ghostNetMB.nbRetrieved}" />
+                    </div>
+                    <div class="widget">
+                        <h2>Looking for</h2>
+						<h:outputLabel value="#{ghostNetMB.nbLooking}" />
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <h2>Ghost Nets I'am looking for</h2>
+                       <h:dataTable value="#{ghostNetMB.lookingForList}" var="ghostNet" styleClass="data-table" emptyMessage="No records found">
+                        <h:column>
+                            <f:facet name="header">ID</f:facet>
+                            #{ghostNet.id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Location</f:facet>
+                            #{ghostNet.location}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Size</f:facet>
+                            #{ghostNet.size}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Reporter's name</f:facet>
+                            #{ghostNet.reporterFullName}
+                        </h:column>
+						<h:column>
+                            <f:facet name="header">Reporter's phone</f:facet>
+                            #{ghostNet.reporterPhone}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Status</f:facet>
+                            #{ghostNet.status}
+                        </h:column>
+                            <h:column>
+                            <f:facet name="header">Actions</f:facet>
+                            <h:button styleClass="action-button" value="Mark as retrieved" outcome="markAsRetrieved" >
+                            	<f:param name="id" value="#{ghostNet.id}" />
+                            </h:button>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+        </div>
+    </h:body>
+
+</ui:composition>

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px auto;
+    text-align: center; /* Center the content */
+}
+
+.section-title {
+    color: #333;
+    display: inline-block; /* Center the title */
+    margin-bottom: 10px; /* Add some space between title and paragraph */
+}
+
+.report-form {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-section {
+    margin-bottom: 15px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.report-form input[type="text"],
+.report-form input[type="number"],
+.report-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.report-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.report-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.report-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for the back button */
+.back-button {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Add margin to separate from the "Submit Report" button */
+}
+
+.back-button:hover {
+    background-color: #999;
+}
+
+.success-message {
+    color: #28a745; 
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error{
+	    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";@charset "UTF-8";
+
+body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 160px auto;
+}
+
+.section-title {
+    color: #333;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-button,
+.signup-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #0056b3;
+}

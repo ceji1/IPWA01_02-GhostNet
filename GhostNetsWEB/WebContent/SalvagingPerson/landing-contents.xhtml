@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+>
+    <h:head>
+        <title>GhostNets Application - Salvaging</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/ressources/css/salvaging.css" />
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <h2 class="section-title">Join Our Salvaging Team</h2>
+            <p style="text-align: center">Make a difference in preserving marine life by becoming a part of our salvaging team. Together, we can actively contribute to removing ghost nets from the sea.</p>
+
+            <div class="cta-buttons">
+            	<h:form>
+            		   <h:commandButton value="Login" styleClass="login-button" action="#{spMB.navigateToLogin}" immediate="true" />
+              		  <h:commandButton value="Sign Up" styleClass="signup-button" action="#{spMB.navigateToSignup}" />	
+            	</h:form>
+            
+            </div>
+        </div>
+    </h:body>
+</ui:composition>

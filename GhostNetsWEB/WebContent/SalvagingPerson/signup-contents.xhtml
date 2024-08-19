@@ -1,0 +1,52 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <title>GhostNets Application - Login</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/ressources/css/login.css" />
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <h2 class="section-title">Salvaging Team Signup</h2>
+            <h:form styleClass="login-form">
+            	 <h:outputText style="color:green;font-weight:bold;" value="#{spMB.successSignup}" />
+                <div class="form-section">
+                    <h:outputText value="First Name : " for="fName"/>
+                    <h:inputText id="fName" value="#{spMB.salvagingPerson.firstName}" required="true" />
+                </div>
+
+                <div class="form-section">
+                    <h:outputText value="Last Name : " for="lastName"/>
+                    <h:inputText id="lName" value="#{spMB.salvagingPerson.lastName}" required="true" />
+                </div>
+
+                <div class="form-section">
+                    <h:outputText value="Email : " for="username"/>
+                    <h:inputText id="username" value="#{spMB.salvagingPerson.email}" required="true" >
+                    	   <f:validateRegex pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                    </h:inputText>
+                </div>
+
+                <div class="form-section">
+                    <h:outputText value="Password : "  />
+                    <h:inputSecret id="password" value="#{spMB.salvagingPerson.password}" required="true" />
+                </div>
+
+                <h:commandButton value="Signup" styleClass="login-button" action="#{spMB.signup}" />
+                <h:commandButton value="Back" styleClass="back-button" action="#{spMB.navigateToLanding}" immediate="true" />
+
+                <div class="message">
+                    <h:messages globalOnly="true" styleClass="error-message" />
+                    <h:outputText value="#{salvagingLoginMB.successMessage}" styleClass="success-message" />
+                </div>
+            </h:form>
+        </div>
+    </h:body>
+
+</ui:composition>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+    version="2.3">
+    
+    <!-- Navigation rules -->
+	
+	<navigation-rule>
+		<from-view-id>home.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>landing</from-outcome>
+			<to-view-id>/Reporters/landing.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/Reporters/landing.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>report</from-outcome>
+			<to-view-id>/Reporters/report.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/Reporters/report.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>back</from-outcome>
+			<to-view-id>/Reporters/landing.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/Reporters/report.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>reported</from-outcome>
+			<to-view-id>/Reporters/report.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<!-- Salvaging navigation rules -->
+		<navigation-rule>
+		<from-view-id>/Salvaging/landing.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/Salvaging/login.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/Salvaging/landing.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>signup</from-outcome>
+			<to-view-id>/Salvaging/signup.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/Salvaging/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>landing</from-outcome>
+			<to-view-id>/Salvaging/landing.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/Salvaging/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>dashboard</from-outcome>
+			<to-view-id>/Salvaging/dashboard.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/Salvaging/signup.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>landing</from-outcome>
+			<to-view-id>/Salvaging/landing.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+</faces-config>

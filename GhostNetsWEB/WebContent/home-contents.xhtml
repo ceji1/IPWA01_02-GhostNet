@@ -1,0 +1,52 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets" 
+>
+    <h:head>
+        <title>GhostNets Application</title>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/faces/ressources/css/home.css" />
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <h1 class="title">Welcome to GhostNets</h1>
+
+            <p class="description">
+                GhostNets is a web application dedicated to tracking and salvaging abandoned fishing nets, commonly known as "ghost nets." Our platform provides a centralized system for reporting, managing, and retrieving ghost nets from the sea. Together, we can make a positive impact on marine life and the environment.
+            </p>
+
+            <h2 class="section-title">Key Features</h2>
+            <ul class="feature-list">
+                <li><b>Efficient Reporting:</b> Report ghost nets anonymously or as a salvaging individual.</li>
+                <li><b>Salvaging Coordination:</b> Coordinate and redistribute salvages to avoid unnecessary trips.</li>
+                <li><b>Real-time Tracking:</b> View the status of ghost nets on a world map.</li>
+                <li><b>Missing Nets:</b> Report ghost nets as missing to streamline search efforts.</li>
+            </ul>
+
+            <h2 class="section-title">Benefits</h2>
+            <div class="benifits">
+                <img src="ressources/attests/gn.jpg" alt="Ghost Nets Image" />
+                <ul class="benefit-list">
+                    <li><b>Environmental Impact:</b> Contribute to the preservation of marine ecosystems by removing ghost nets.</li>
+                    <li><b>Community Collaboration:</b> Connect with like-minded individuals to collectively address the issue of ghost nets.</li>
+                    <li><b>Efficiency and Transparency:</b> Streamline the reporting and salvaging process with a user-friendly and transparent platform.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Get Involved</h2>
+            <div class="get-involved">
+                Join GhostNets today and be part of the solution! Whether you're reporting ghost nets or contributing to salvaging efforts, your participation makes a difference.
+               <h:form>
+               <h:commandButton class="report-button" value="Report Anonymously"  action="#{ghostNetMB.reportAnonymously}" />               
+               </h:form>
+            </div>
+
+            <p class="cta">
+                <b>Are you a salving person?</b> <a href="SalvagingPerson/signup.xhtml" class="cta-link">Sign up</a> or <a href="SalvagingPerson/login.xhtml" class="cta-link">Log in</a> to your GhostNets account.
+            </p>
+        </div>
+    </h:body>
+</ui:composition>

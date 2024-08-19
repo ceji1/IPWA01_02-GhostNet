@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+.sidebar {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px;
+    width: 250px;
+    height: 100%;
+    box-sizing: border-box; /* Include padding and border in height */
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.sidebar-title {
+    font-size: 23px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* Add this to your existing CSS file or create a new one */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-link {
+	margin-top: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    
+}
+
+.sidebar-link:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,135 @@
+/* dashboard.css */
+@charset "UTF-8";
+
+body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set full height of the page */
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100%; /* Set full height of the page */
+}
+
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.top-widgets {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.widget {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.table-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    flex-grow: 1;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    background-color: orangered;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+
+.custom-form {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.form-section {
+    margin-bottom: 15px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.custom-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.signup-button, .decline-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover, .decline-button:hover {
+    background-color: #0056b3;
+}

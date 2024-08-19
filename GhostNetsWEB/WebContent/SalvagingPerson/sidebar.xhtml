@@ -1,0 +1,27 @@
+<!-- salvaging_dashboard.xhtml -->
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/ressources/css/sidebar.css" />
+    </h:head>
+
+            <div class="sidebar">
+                <h:outputText value="Salvaging Dashboard" styleClass="sidebar-title" />
+               
+                   <ul class="sidebar-links">
+                    <li><h:link outcome="dashboard" value="DashBoard" styleClass="sidebar-link"  /></li>
+                    <li><h:link outcome="reported" value="GhostNets Reported" styleClass="sidebar-link"  /></li>
+                    <li><h:link outcome="lookingfor" value="GhostNets Looking for" styleClass="sidebar-link"  /></li>
+                    <li><h:link outcome="retrieved" value="GhostNets Retrieved" styleClass="sidebar-link"  /></li>
+                    <li><h:link outcome="disconnect" value="Disconnect" styleClass="sidebar-link" /></li>
+                </ul>
+            </div>
+
+</ui:composition>

@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:fn="http://java.sun.com/jsf/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/GhostNetsWEB/faces/ressources/css/landing.css" />
+    </h:head>
+
+    <h:body>
+        <div class="landing-container">
+            <h2>Welcome, Ghost Net Reporter!</h2>
+            <p>
+                Thank you for contributing to our mission of salvaging ghost nets. If you have found a ghost net,
+                please click the button below to report it.
+            </p>
+            <p>
+                Together, we can make our seas safer!
+            </p>
+            	<h:form>
+            	     <h:commandButton styleClass="report" value="Report Ghost Net" action="#{ghostNetMB.fillAreport()}" />
+            	</h:form>
+        </div>
+    </h:body>
+
+</ui:composition>
